@@ -1,6 +1,8 @@
 // Require in npm modules and local files
 const mongoose = require("mongoose");
 const db = require("../models");
+const dotenv = require("dotenv");
+dotenv.config();
 
 // Connect to the live Mongoose database or a local Mongoose database
 mongoose.connect(
