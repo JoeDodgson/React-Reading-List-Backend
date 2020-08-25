@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const cors = require("cors");
 
 // Set up express server
 const app = express();
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 3001;
 // Set up middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 
 // Add API routes and view
 app.use(routes);
